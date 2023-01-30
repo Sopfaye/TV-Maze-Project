@@ -1,0 +1,156 @@
+/*font-family: 'Unbounded', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Indie Flower', cursive;
+*/
+.showDiv {
+  display:grid;
+  grid-template-areas: 
+  'showtitle showtitle'
+  'elemImage elemRating'
+  'elemGenre elemGenre'
+  'elemEpisodes elemSummary';
+  border: #DBCDC6 2px solid;
+}
+
+body {
+  background-color: #1F1A38;
+  color:#DD99BB;
+}
+
+.showtitle{
+  grid-area: showtitle;
+  font-size:3em;
+  color:#7B506F;
+  font-family: 'Indie Flower', cursive;
+}
+
+.elemEpisodes{
+grid-area: elemEpisodes;
+ font-size: 20px;
+ overflow-y: scroll;
+ border: #7B506F 5px solid;
+ max-height: 200px;
+ width:400px;
+ align-items: center;
+justify-content: center;
+}
+
+.elemGenre{
+grid-area: elemGenre;
+font-size: 20px;
+}
+
+.elemRating{
+grid-area: elemRating;
+font-size: 20px;
+padding:10px;
+margin-right:500px;
+}
+
+.elemSummary{
+grid-area: elemSummary;
+font-size: 20px;
+}
+
+.elemImage{
+  grid-area: elemImage;
+  margin: 10px;
+  width: 250px;
+}
+
+#lightbox {
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:50%;
+  height:50%;
+  background-color:rgba(0,0,0,0.9); 
+  display:none;
+}
+
+#lightbox {
+    width:80%;
+    /*padding:10px;*/
+    background-color:#EAD7D1;
+    color:#7B506F;
+    text-align:center;
+    
+    /* Center the message in the lightbox */
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 10px;
+  font-family: 'Unbounded', cursive;
+  color: #DD99BB;
+  background-color: #7B506F;
+}
+
+#search {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 844px) {
+  .showDiv {
+    display:grid;
+    grid-template-areas: 
+    'showtitle showtitle'
+    'elemImage elemRating'
+    'elemGenre elemGenre'
+    'elemEpisodes elemSummary ';
+    /* border: #DBCDC6 2px solid; */
+  }
+  #lightbox {
+    width: 100%;
+    height:60%
+  }
+  #search {
+    font-size: 20px;
+  }
+  button {
+    font-size: 20px;
+  }
+  .elemEpisodes {
+    grid-area: elemEpisodes;
+    font-size: 13px;
+    max-height: 200px;
+    width:250px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .elemGenre{
+    grid-area: elemGenre;
+    font-size: 15px;
+  }
+    
+  .elemRating{
+    grid-area: elemRating;
+    font-size: 15px;
+  }
+    
+  .elemSummary{
+    grid-area: elemSummary;
+    font-size: 13px;
+  }
+ 
+  .showtitle{
+    grid-area: showtitle;
+      font-size:20px;
+      color:#7B506F;
+  }
+
+  .elemImage {
+      width: 150px;
+      height:150px;
+  }
+}
